@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Anubhav-Agrotech</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/homekacss.css')}}">
+  </head>
+  <body>
+    <main>
+      <body>
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='farmer.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      <h1>AnubhavAgroTech Connect</h1>
+      <p style="color: black;" class="likhna">Welcome to Anubhav-Agrotech: Empowering Agriculture with Innovation!
+        At Anubhav-Agrotech, we extend a warm welcome to you, as we embark on a journey to revolutionize agriculture through cutting-edge technology. Our integrated platform seamlessly combines advanced crop recommendation systems and real-time weather forecast integration, providing farmers with invaluable insights for optimal crop management.
+        <br>
+        Our state-of-the-art Crop Recommendation System utilizes a sophisticated model to analyze soil nutrient levels, temperature, humidity, pH, and rainfall. By inputting these parameters, farmers receive personalized crop suggestions, enhancing yield, and minimizing resource wastage. This technology streamlines decision-making processes, empowering farmers to make informed choices for sustainable and efficient farming practices.
+        <br>
+        In addition to our Crop Recommendation System, we proudly integrate real-time weather forecasts into our platform. Weather conditions play a pivotal role in agriculture, influencing planting schedules, irrigation plans, and harvesting strategies. Our weather forecast integration ensures that farmers have access to accurate and timely information, enabling them to proactively respond to changing weather patterns.
+        The synergy between our Crop Recommendation System and Weather Forecast Integration offers a comprehensive solution for modern agriculture. By harnessing the power of data-driven insights, we aim to mitigate risks, increase productivity, and promote environmental sustainability. Join us in redefining the future of agriculture, where innovation meets tradition, and technology becomes an ally for every farmer
+        Thank you for choosing  Anubhav-Agrotech. 
+        <br>Let's cultivate success together!</p>
+      <br>
+      <h3 style="color: #0e1210;">Click the button for Crop recommendation</h3>
+    </main>
+     <form action="/Predict">
+      <input type="submit" id="Predict" name="Predict" action="/Predict" value="Predict" style="background-color: #0bb05d; cursor:crosshair; text-shadow: .5px .5px .5px #0e1210; height: 50px ; width: 175px;" >
+     </form>
+     <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin: 50px;
+          background-size: cover;
+        }
+      h1 {
+          color: #067b27;
+          font: 400;
+          font-size: xx-large;
+          font-weight: 300;
+          text-shadow: 1.5px 1px 1.2px black;
+          font-variant: small-caps;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight:900
+      }
+
+      form {
+          margin-top: 20px;
+      }
+      h3{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+      }
+
+      label {
+          font-weight: bold;
+      }
+      
+      .likhna{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      input {
+          padding: 5px;
+          margin: 5px;
+          width: 200px;
+      }
+
+      button {
+          padding: 8px;
+          background-color: hsl(204, 82%, 28%);
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+      }
+
+      button:hover {
+          background-color: #2980b9;
+      }
+
+      h2 {
+          margin-top: 20px;
+          color: #2ecc71;
+      }
+
+      pre {
+          white-space: pre-wrap;
+      }
+  </style>
+  <br>
+     <h1>Weather Forecast</h1>
+     <form action="/weather" method="post">
+         <label for="city" style="font-weight: bold; font-size: 16px; color: #612020;">Enter City Name:</label>
+         <input type="text" id="city" name="city" required style="padding: 8px; margin: 5px; width: 200px; font-size: 14px;">
+         <button type="submit">Get Weather</button>
+     </form>
+     <!-- {% if city %}
+     <h2>Weather Report for {{ city }}</h2>
+     <pre>{{ weather_data|safe }}</pre>
+     {% endif %}  -->
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/first.css')}}">
+</head>
+<style>
+    .black-bar{
+            padding: 10x;
+            font-size: medium;
+            line-height: 3.2;
+            width: 50%;
+            height: 100%;
+        }
+    h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(20, 71, 154);
+        box-sizing: initial;
+    }
+</style>
+<body>
+    <div class="black-bar">
+        <h1 style="background-color: black; color: rgb(14, 3, 156); font-family:'Times New Roman', Times, serif;">AnubhavAgroTech Connect</h1>
+        <br>    
+    </div>
+    {% if city %}
+     <h2>Weather Report for {{ city }}</h2>
+     <pre>{{ weather_data|safe }}</pre>
+     {% endif %} 
+</body>
+</html>

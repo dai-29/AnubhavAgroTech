@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/croprecommend.css')}}">
+    <title>Recommended crop</title>
+  </head>
+  <style>
+     body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+    h1{
+      border: 10px;
+      line-height: 2;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+  <body>
+    <h1>According to your soil neutrients, You Should Grow :<br>{{prediction}} </h1>
+  </body>
+</html>
